@@ -1,3 +1,7 @@
+NOTE: The DAO is contained in the src along with the jdbc file
+       Run the Relational Schema.sql for table creation
+
+
 University Management System
 
 Overview
@@ -94,6 +98,6 @@ Features
 - [Java, HTML, CSS, MySQL, JDBC]
 
 ---
-Run the Relational Schema.sql for table creation
+
 
 
