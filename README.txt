@@ -1,10 +1,9 @@
-NOTE: The DAO is contained in the src along with the jdbc file
-       Run the Relational Schema.sql for table creation
+Repository struture:
+The repository contains the DAO classes in their respective packages i.e., course, department, faculty etc. The jdbc file is in the util package.
+The repository contains a relation schema.jpg to help visualize the sturcture of MySQL table
 
-
-University Management System
-
-Overview
+---
+Project Overview:
 The University Management System is designed to streamline and automate key administrative processes within a university. It contains four main domains: Student Management, Faculty Management, Course Management, and Department Management. Each domain is aimed at enhancing the efficiency and organization of university operations.
 
 ---
