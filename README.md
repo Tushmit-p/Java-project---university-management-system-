@@ -1,5 +1,6 @@
 ## Repository struture:
 - `src`: the folder to maintain sources. It contains the DAO classes in their respective packages i.e., course, department, faculty etc. The jdbc file is in the util package.
+- Note: The HTML files have been added in the `src` folder
 - `relation schema.jpg`: to help visualize the sturcture of MySQL table
 
 ---
