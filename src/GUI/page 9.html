@@ -1,0 +1,295 @@
+<style>
+    .dashboard-container {
+      border-radius: 20px;
+      padding: 0 0 19px;
+      overflow: hidden;
+    }
+    
+    .content-wrapper {
+      display: flex;
+      gap: 20px;
+    }
+    
+    .sidebar {
+      width: 24%;
+      background-color: rgba(255, 250, 250, 1);
+      border-radius: 20px;
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+      padding: 28px 1px 16px;
+    }
+    
+    .logo-section {
+      margin-left: 29px;
+      width: 202px;
+      color: rgba(43, 89, 206, 1);
+      font: 700 16px Istok Web, sans-serif;
+    }
+    
+    .logo-wrapper {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .logo {
+      width: 108px;
+      aspect-ratio: 1.21;
+      object-fit: contain;
+    }
+    
+    .brand-name {
+      font-size: 32px;
+      color: #000;
+      margin-top: 18px;
+    }
+    
+    .nav-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin: 20px 0;
+      padding: 10px 20px;
+      color: rgba(43, 89, 206, 1);
+      font: 700 16px Istok Web, sans-serif;
+    }
+    
+    .nav-icon {
+      width: 40px;
+      aspect-ratio: 1;
+      object-fit: contain;
+    }
+    
+    .main-content {
+      width: 76%;
+    }
+    
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    
+    .search-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    
+    .search-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 250, 250, 1);
+      border-radius: 10px;
+      padding: 9px 20px;
+    }
+    
+    .search-icon {
+      width: 22px;
+      aspect-ratio: 0.92;
+      object-fit: contain;
+    }
+    
+    .user-profile {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .user-avatar {
+      width: 72px;
+      aspect-ratio: 1.04;
+      border-radius: 100px;
+      object-fit: contain;
+    }
+    
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 40px;
+    }
+    
+    .course-card {
+      background: rgba(255, 250, 250, 1);
+      border-radius: 20px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+      padding-bottom: 20px;
+    }
+    
+    .course-image {
+      width: 100%;
+      aspect-ratio: 1.6;
+      border-radius: 20px 20px 0 0;
+      object-fit: cover;
+    }
+    
+    .course-info {
+      padding: 20px;
+    }
+    
+    .course-title {
+      font: 700 16px Istok Web, sans-serif;
+      color: rgba(61, 60, 60, 1);
+    }
+    
+    .resume-btn {
+      background: rgba(217, 217, 217, 0.44);
+      border: 1px solid #000;
+      border-radius: 10px;
+      padding: 10px 70px;
+      margin: 20px auto;
+      display: block;
+      font: 400 16px Istok Web, sans-serif;
+    }
+    
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+    
+    @media (max-width: 991px) {
+      .content-wrapper {
+        flex-direction: column;
+      }
+      
+      .sidebar,
+      .main-content {
+        width: 100%;
+      }
+      
+      .courses-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .nav-item {
+        margin: 10px 0;
+      }
+    }
+    </style>
+    
+    <div class="dashboard-container">
+      <div class="content-wrapper">
+        <nav class="sidebar" role="navigation">
+          <div class="logo-section">
+            <div class="logo-wrapper">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c7f1a955bb1eb93ae527f61c5d43cfe0957cb4305c6b184823094df83f6e1055?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="Smart Learn Logo" class="logo" />
+              <span class="brand-name">smart learn</span>
+            </div>
+            
+            <a href="#" class="nav-item" tabindex="0">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cad9bf7e759addd4fa574d8cd4480338aa226c09af158a6b353387deab88202b?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+              <span>Dashboard</span>
+            </a>
+            
+            <a href="#" class="nav-item" tabindex="0">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/25b27fd62ccb7c9aab86aa087c455b83b45b1ffadeb126ff476b35100607b5eb?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+              <span>Calendar</span>
+            </a>
+    
+            <a href="#" class="nav-item" tabindex="0">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e14c9a79a6b64b8d505eb9703abef6177c3c5555be164dda8d7d980493a9399d?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+              <span>Library</span>
+            </a>
+    
+            <a href="#" class="nav-item" tabindex="0">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/193d8a542bace9280b032f53c89f329bb174e63a7636b0309cae1aa8b7c3cdd4?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+              <span>Classroom</span>
+            </a>
+    
+            <a href="#" class="nav-item" tabindex="0">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0c523577d26237dbb620331438f0576b41f6b9c406828c4f14310d39338d1c7c?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+              <span>Courses</span>
+            </a>
+    
+            <a href="#" class="nav-item" tabindex="0">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/dacacd041401d57cc0beea57dcd37927fd0fffbf1d16268438a8b1ecf9693e67?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+              <span>Integration</span>
+            </a>
+    
+            <a href="#" class="nav-item" tabindex="0">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8e5342672aa584cb97784acc7cb6a6c4b84da352126de8cc7e436fe72a4564e3?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+              <span>Assignments</span>
+            </a>
+    
+            <a href="#" class="nav-item" tabindex="0">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5ae4ef7f9d3bcbe50a5b0a4d134f9ea4dfb0d892ad4a947028fdca19e2abdd84?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+              <span>Attendance</span>
+            </a>
+    
+            <a href="#" class="nav-item" tabindex="0">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9fa3a651017721db6d6bf749b66b660560ca6da7c6e4067040521b8c7e026662?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+              <span>Messages</span>
+            </a>
+    
+            <a href="#" class="nav-item" tabindex="0">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ba27ff6d1c7e71f80209ef745eec4b0a8136953e9b6927a6f1b1cb4404602631?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+              <span>Help</span>
+            </a>
+    
+            <a href="#" class="nav-item" tabindex="0">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/50972fc07dbb4d8135743744c711875340043ad494b28165ca290b33fed43254?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+              <span>Settings</span>
+            </a>
+    
+            <a href="#" class="nav-item" tabindex="0">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/07e10317a586e23564707774cc3c6c08dba90de7e8f41ac6d162248ffdfa6437?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+              <span>Log out</span>
+            </a>
+          </div>
+        </nav>
+    
+        <main class="main-content">
+          <header class="header">
+            <div class="search-section">
+              <h1>Courses</h1>
+              <div class="search-box">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e94ab083c4e336e1554b9863302a882fbda18cab03919d98d31ef33539691853?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="search-icon" />
+                <label for="search-input" class="visually-hidden">Search courses</label>
+                <input type="search" id="search-input" placeholder="Search" />
+              </div>
+            </div>
+    
+            <div class="user-profile">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8c4a24c0d765f584451f9bf2b5e831dfae757b91dc50354d441bab07ae81c5f3?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="Profile photo of Swetha shankaresh" class="user-avatar" />
+              <div>
+                <span>Swetha shankaresh</span>
+                <span>Student</span>
+              </div>
+            </div>
+          </header>
+    
+          <div class="courses-grid">
+            <article class="course-card">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6529f727-2df8-4619-b177-424d7e5f1a3c?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="Chemistry course thumbnail" class="course-image" />
+              <div class="course-info">
+                <h2 class="course-title">Chemistry Department</h2>
+                <button class="resume-btn">Resume</button>
+              </div>
+            </article>
+    
+            <article class="course-card">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fb602065303c1c844671ad7e44e146f9526dcf3aec26de492a7bf2c098517813?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="Computer Science course thumbnail" class="course-image" />
+              <div class="course-info">
+                <h2 class="course-title">Computer Science Department</h2>
+                <button class="resume-btn">Resume</button>
+              </div>
+            </article>
+    
+            <article class="course-card">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2cf303d085945bd436b0f7df41da1e68f36523b69a48866454ecedf48065de66?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="English course thumbnail" class="course-image" />
+              <div class="course-info">
+                <h2 class="course-title">English Department</h2>
+                <button class="resume-btn">Resume</button>
+              </div>
+            </article>
+          </div>
+        </main>
+      </div>
+    </div>

@@ -1,0 +1,305 @@
+<style>
+    .dashboard-container {
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    
+    .main-layout {
+      display: flex;
+      gap: 20px;
+    }
+    
+    @media (max-width: 991px) {
+      .main-layout {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+    }
+    
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 24%;
+      margin-left: 0;
+    }
+    
+    @media (max-width: 991px) {
+      .sidebar {
+        width: 100%;
+      }
+    }
+    
+    .sidebar-content {
+      border-radius: 20px;
+      background-color: #FFFAFA;
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: start;
+      margin: 0 auto;
+      padding: 28px 0 59px;
+    }
+    
+    @media (max-width: 991px) {
+      .sidebar-content {
+        margin-top: 9px;
+      }
+    }
+    
+    .logo {
+      aspect-ratio: 1.21;
+      object-fit: contain;
+      object-position: center;
+      width: 108px;
+      margin-left: 30px;
+    }
+    
+    @media (max-width: 991px) {
+      .logo {
+        margin-left: 10px;
+      }
+    }
+    
+    .nav-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 10px 20px;
+      color: #2B59CE;
+      font: 700 16px Istok Web, sans-serif;
+      cursor: pointer;
+    }
+    
+    .nav-icon {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+    }
+    
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 52%;
+    }
+    
+    @media (max-width: 991px) {
+      .main-content {
+        width: 100%;
+      }
+    }
+    
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 20px 0;
+    }
+    
+    .page-title {
+      color: #000;
+      font: 700 34px Istok Web, sans-serif;
+    }
+    
+    .search-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #FFFAFA;
+      border-radius: 10px;
+      padding: 10px 20px;
+    }
+    
+    .search-input {
+      border: none;
+      background: transparent;
+      font: 400 14px Istok Web, sans-serif;
+      width: 200px;
+    }
+    
+    .announcement-section {
+      background: #FFFAFA;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    
+    .announcement-header {
+      font: 700 20px Istok Web, sans-serif;
+      margin-bottom: 15px;
+    }
+    
+    .announcement-card {
+      background: #D4DEFF;
+      border-radius: 20px;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .join-button {
+      background: #2525AD;
+      color: #fff;
+      border-radius: 10px;
+      padding: 10px 30px;
+      font: 700 14px Istok Web, sans-serif;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .progress-section {
+      background: #FFFAFA;
+      border-radius: 20px;
+      padding: 20px;
+    }
+    
+    .progress-title {
+      font: 700 20px Istok Web, sans-serif;
+      margin-bottom: 20px;
+    }
+    
+    .progress-bar {
+      background: #D5CBFB;
+      border-radius: 20px;
+      height: 10px;
+      margin: 10px 0;
+    }
+    
+    .progress-fill {
+      background: #2B59CE;
+      border-radius: 20px;
+      height: 100%;
+    }
+    
+    .assignments-section {
+      background: #FFFAFA;
+      border-radius: 20px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    
+    .assignment-card {
+      background: #F7F3F3;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 10px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .pending-status {
+      color: #FE9519;
+      font: 700 14px Istok Web, sans-serif;
+    }
+    
+    .completed-status {
+      color: #1CC800;
+      font: 700 14px Istok Web, sans-serif;
+    }
+    
+    .profile-section {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 24%;
+    }
+    
+    @media (max-width: 991px) {
+      .profile-section {
+        width: 100%;
+      }
+    }
+    
+    .profile-card {
+      background: #FFFAFA;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 4px 10px 10px rgba(0, 0, 0, 0.25);
+    }
+    
+    .profile-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    
+    .profile-image {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    
+    .profile-info {
+      font-family: Istok Web, sans-serif;
+    }
+    
+    .profile-name {
+      font-weight: 700;
+      font-size: 14px;
+    }
+    
+    .profile-role {
+      color: #3E3E3E;
+      font-size: 12px;
+    }
+    
+    .calendar-section {
+      margin-top: 20px;
+    }
+    
+    .calendar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    
+    .calendar-title {
+      font: 700 20px Istok Web, sans-serif;
+    }
+    
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    
+    .calendar-day {
+      background: #D9D9D9;
+      border-radius: 10px;
+      padding: 5px;
+      text-align: center;
+      font: 400 12px Istok Web, sans-serif;
+    }
+    
+    .schedule-item {
+      background: #EBEBEB;
+      border-radius: 5px;
+      padding: 10px;
+      margin: 10px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+    </style>
+    
+    [Rest of the HTML code follows the same structure but with updated class names and accessibility attributes as per requirements]

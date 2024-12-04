@@ -1,0 +1,432 @@
+<style>
+    .attendance-container {
+      border-radius: 20px;
+      padding: 0 0 19px;
+      overflow: hidden;
+    }
+    
+    .main-layout {
+      gap: 20px;
+      display: flex;
+    }
+    
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 24%;
+    }
+    
+    .sidebar-content {
+      border-radius: 20px;
+      background-color: rgba(255, 250, 250, 1);
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: start;
+      color: rgba(43, 89, 206, 1);
+      padding: 28px 0 16px;
+      font: 700 16px Istok Web, sans-serif;
+    }
+    
+    .logo-section {
+      display: flex;
+      margin-left: 30px;
+      width: 192px;
+      max-width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .logo-wrapper {
+      align-self: stretch;
+      display: flex;
+      align-items: flex-start;
+      font-size: 32px;
+      color: rgba(0, 0, 0, 1);
+    }
+    
+    .logo {
+      aspect-ratio: 1.21;
+      object-fit: contain;
+      object-position: center;
+      width: 108px;
+      align-self: start;
+      max-width: 100%;
+    }
+    
+    .brand-name {
+      align-self: end;
+      margin-top: 30px;
+    }
+    
+    .nav-item {
+      display: flex;
+      margin-top: 52px;
+      width: 140px;
+      max-width: 100%;
+      gap: 20px;
+      justify-content: space-between;
+    }
+    
+    .nav-icon {
+      aspect-ratio: 0.93;
+      object-fit: contain;
+      object-position: center;
+      width: 28px;
+    }
+    
+    .nav-text {
+      margin: auto 0;
+    }
+    
+    .content-section {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 76%;
+      margin-left: 20px;
+    }
+    
+    .content-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-self: stretch;
+      margin: auto 0;
+    }
+    
+    .header {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      padding: 0 56px 0 9px;
+    }
+    
+    .page-title {
+      color: rgba(0, 0, 0, 1);
+      align-self: start;
+      font: 700 34px Istok Web, sans-serif;
+    }
+    
+    .header-controls {
+      display: flex;
+      margin-top: 7px;
+      width: 100%;
+      align-items: center;
+      gap: 20px;
+      justify-content: space-between;
+    }
+    
+    .search-box {
+      border-radius: 10px;
+      background-color: rgba(255, 250, 250, 1);
+      align-self: stretch;
+      display: flex;
+      align-items: start;
+      color: rgba(0, 0, 0, 0.36);
+      margin: auto 0;
+      padding: 9px 20px;
+      font: 700 12px Istok Web, sans-serif;
+    }
+    
+    .search-icon {
+      aspect-ratio: 0.92;
+      object-fit: contain;
+      object-position: center;
+      width: 22px;
+    }
+    
+    .notification-section {
+      align-self: stretch;
+      display: flex;
+      gap: 20px;
+      margin: auto 0;
+    }
+    
+    .notification-icon {
+      aspect-ratio: 0.79;
+      object-fit: contain;
+      object-position: center;
+      width: 19px;
+    }
+    
+    .user-profile {
+      align-self: stretch;
+      display: flex;
+      gap: 16px;
+      font-family: Istok Web, sans-serif;
+    }
+    
+    .profile-image {
+      aspect-ratio: 1.04;
+      object-fit: contain;
+      object-position: center;
+      width: 72px;
+      border-radius: 100px;
+    }
+    
+    .profile-info {
+      display: flex;
+      flex-direction: column;
+      margin: auto 0;
+    }
+    
+    .user-name {
+      display: flex;
+      gap: 9px;
+      font-size: 14px;
+      color: rgba(0, 0, 0, 1);
+      font-weight: 700;
+    }
+    
+    .calendar-section {
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 1);
+      display: flex;
+      margin-top: 9px;
+      flex-direction: column;
+      align-items: center;
+      font-family: Istok Web, sans-serif;
+      color: rgba(0, 0, 0, 1);
+      font-weight: 700;
+      padding: 69px 80px 24px;
+    }
+    
+    .calendar-header {
+      display: flex;
+      margin-left: 23px;
+      width: 641px;
+      max-width: 100%;
+      align-items: start;
+      gap: 32px;
+      font-size: 14px;
+    }
+    
+    .calendar-title {
+      font-size: 20px;
+      flex-grow: 1;
+    }
+    
+    .calendar-controls {
+      align-self: stretch;
+      display: flex;
+      align-items: start;
+      gap: 15px;
+    }
+    
+    .calendar-grid {
+      display: flex;
+      margin-top: 75px;
+      width: 100%;
+      flex-direction: column;
+      align-items: start;
+      font-size: 16px;
+      padding: 0 10px;
+    }
+    
+    .calendar-dates {
+      display: flex;
+      width: 672px;
+      max-width: 100%;
+      gap: 20px;
+      justify-content: space-between;
+    }
+    
+    .attendance-status {
+      align-self: stretch;
+      display: flex;
+      margin-top: 34px;
+      align-items: start;
+      gap: 20px;
+      font-size: 14px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    
+    .status-present {
+      background-color: rgba(40, 201, 14, 0.74);
+      padding: 5px 16px 13px;
+    }
+    
+    .status-absent {
+      background-color: rgba(255, 46, 0, 0.74);
+      padding: 4px 17px 14px;
+    }
+    
+    .status-holiday {
+      background-color: rgba(216, 163, 43, 1);
+      padding: 8px 16px;
+    }
+    
+    .status-sick {
+      background-color: rgba(205, 79, 51, 0.74);
+      padding: 5px 11px 13px;
+    }
+    
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
+    
+    @media (max-width: 991px) {
+      .attendance-container {
+        padding-right: 20px;
+      }
+      
+      .main-layout {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+      
+      .sidebar {
+        width: 100%;
+      }
+      
+      .content-section {
+        width: 100%;
+        margin-top: 40px;
+      }
+      
+      .header {
+        max-width: 100%;
+        padding-right: 20px;
+      }
+      
+      .calendar-section {
+        max-width: 100%;
+        padding: 0 20px;
+      }
+      
+      .calendar-grid {
+        max-width: 100%;
+        margin-top: 40px;
+      }
+    }
+    </style>
+    
+    <div class="attendance-container">
+      <div class="main-layout">
+        <div class="sidebar">
+          <div class="sidebar-content">
+            <div class="logo-section">
+              <div class="logo-wrapper">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c7f1a955bb1eb93ae527f61c5d43cfe0957cb4305c6b184823094df83f6e1055?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="Smart Learn Logo" class="logo" />
+                <div class="brand-name">smart learn</div>
+              </div>
+              
+              <nav>
+                <div class="nav-item">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cad9bf7e759addd4fa574d8cd4480338aa226c09af158a6b353387deab88202b?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+                  <div class="nav-text">Dashboard</div>
+                </div>
+                
+                <div class="nav-item">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/25b27fd62ccb7c9aab86aa087c455b83b45b1ffadeb126ff476b35100607b5eb?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+                  <div class="nav-text">Calendar</div>
+                </div>
+                
+                <div class="nav-item">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e14c9a79a6b64b8d505eb9703abef6177c3c5555be164dda8d7d980493a9399d?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+                  <div class="nav-text">Library</div>
+                </div>
+                
+                <div class="nav-item">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/193d8a542bace9280b032f53c89f329bb174e63a7636b0309cae1aa8b7c3cdd4?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+                  <div class="nav-text">Classroom</div>
+                </div>
+                
+                <div class="nav-item">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0c523577d26237dbb620331438f0576b41f6b9c406828c4f14310d39338d1c7c?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+                  <div class="nav-text">Courses</div>
+                </div>
+                
+                <div class="nav-item">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/dacacd041401d57cc0beea57dcd37927fd0fffbf1d16268438a8b1ecf9693e67?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+                  <div class="nav-text">Integration</div>
+                </div>
+                
+                <div class="nav-item">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8e5342672aa584cb97784acc7cb6a6c4b84da352126de8cc7e436fe72a4564e3?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+                  <div class="nav-text">Assignments</div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+    
+        <div class="content-section">
+          <div class="content-wrapper">
+            <header class="header">
+              <h1 class="page-title">My Attendance</h1>
+              
+              <div class="header-controls">
+                <div class="search-box" role="search">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a870eea1078b5ca851afcf4ee0b03375b708d33258d92c542fb72e807f28299e?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="search-icon" />
+                  <label for="search" class="visually-hidden">Search</label>
+                  <input type="search" id="search" placeholder="Search" />
+                </div>
+    
+                <div class="notification-section">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5f84a7a9db86da9e39065889f7a1b4553f88c950a19d04772fb2425a1b55fa56?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="Notifications" class="notification-icon" />
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/42f709f16d2b6f67facac920c93cfd0118d4afa5f3e0968bd2c849b5d574b64f?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="notification-icon" />
+                </div>
+    
+                <div class="user-profile">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/57069974a59e938104b06816162a4ae7da5823cc3f2d2c7e0a62b1b6ea9be28f?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="User profile photo" class="profile-image" />
+                  <div class="profile-info">
+                    <div class="user-name">
+                      <span>Swetha shankaresh</span>
+                      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8c4a24c0d765f584451f9bf2b5e831dfae757b91dc50354d441bab07ae81c5f3?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" />
+                    </div>
+                    <div>Student</div>
+                  </div>
+                </div>
+              </div>
+            </header>
+    
+            <section class="calendar-section">
+              <div class="calendar-header">
+                <h2 class="calendar-title">NOVEMBER 2023</h2>
+                
+                <div class="calendar-controls" role="tablist">
+                  <button role="tab">Daily</button>
+                  <button role="tab">Weekly</button>
+                  <button role="tab" aria-selected="true">Monthly</button>
+                  <button role="tab">Yearly</button>
+                </div>
+              </div>
+    
+              <div class="calendar-grid">
+                <div class="calendar-dates">
+                  <div>Monday</div>
+                  <div>Tuesday</div>
+                  <div>Wednesday</div>
+                  <div>Thursday</div>
+                  <div>Friday</div>
+                  <div>Saturday</div>
+                  <div>Sunday</div>
+                </div>
+    
+                <div class="attendance-status">
+                  <div class="status-present">Present</div>
+                  <div class="status-present">Present</div>
+                  <div class="status-sick">Sick leave</div>
+                  <div class="status-absent">Absent</div>
+                  <div class="status-present">Present</div>
+                  <div class="status-present">Present</div>
+                  <div class="status-holiday">Holiday</div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>

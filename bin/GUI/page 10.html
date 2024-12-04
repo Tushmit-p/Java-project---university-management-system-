@@ -1,0 +1,321 @@
+<style>
+    .profile-container {
+      border-radius: 20px;
+      padding: 0 0 19px;
+      overflow: hidden;
+    }
+    
+    .layout-wrapper {
+      display: flex;
+      gap: 20px;
+    }
+    
+    .sidebar {
+      width: 25%;
+      margin: 0;
+    }
+    
+    .sidebar-content {
+      border-radius: 20px;
+      background-color: rgba(255, 250, 250, 1);
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+      width: 100%;
+      padding: 28px 68px 16px 30px;
+      font: 700 16px Istok Web, sans-serif;
+    }
+    
+    .brand-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      font-size: 32px;
+      color: rgba(0, 0, 0, 1);
+    }
+    
+    .brand-logo {
+      width: 108px;
+      aspect-ratio: 1.21;
+    }
+    
+    .brand-name {
+      align-self: end;
+      margin-top: 28px;
+    }
+    
+    .nav-item {
+      display: flex;
+      gap: 34px;
+      margin: 54px 0 0 26px;
+      color: rgba(43, 89, 206, 1);
+    }
+    
+    .nav-icon {
+      width: 28px;
+      aspect-ratio: 0.93;
+    }
+    
+    .nav-text {
+      margin: auto 0;
+    }
+    
+    .main-content {
+      width: 75%;
+      margin-left: 20px;
+      margin-top: 67px;
+    }
+    
+    .profile-header {
+      display: flex;
+      width: 100%;
+      max-width: 990px;
+      gap: 20px;
+      justify-content: space-between;
+    }
+    
+    .page-title {
+      color: rgba(0, 0, 0, 1);
+      font: 700 34px Istok Web, sans-serif;
+    }
+    
+    .user-profile {
+      display: flex;
+      gap: 16px;
+      font-family: Istok Web, sans-serif;
+    }
+    
+    .profile-avatar {
+      width: 72px;
+      aspect-ratio: 1.04;
+      border-radius: 100px;
+    }
+    
+    .profile-info {
+      margin: auto 0;
+    }
+    
+    .profile-name {
+      display: flex;
+      gap: 9px;
+      font-size: 14px;
+      color: rgba(0, 0, 0, 1);
+      font-weight: 700;
+    }
+    
+    .profile-role {
+      color: rgba(62, 62, 62, 1);
+      font-size: 12px;
+    }
+    
+    .profile-form {
+      border-radius: 20px;
+      background-color: rgba(255, 250, 250, 1);
+      margin-top: 20px;
+      width: 100%;
+      padding: 24px 41px;
+    }
+    
+    .form-section {
+      margin-top: 35px;
+    }
+    
+    .form-label {
+      color: rgba(0, 0, 0, 1);
+      font: 700 16px Istok Web, sans-serif;
+    }
+    
+    .form-input {
+      border-radius: 10px;
+      background-color: rgba(255, 250, 250, 1);
+      height: 57px;
+      border: 1px solid rgba(85, 80, 80, 1);
+      width: 100%;
+      margin-top: 15px;
+    }
+    
+    .edit-button {
+      border-radius: 10px;
+      background-color: rgba(255, 250, 250, 1);
+      padding: 10px 37px;
+      border: 1px solid rgba(127, 124, 124, 1);
+    }
+    
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
+    
+    @media (max-width: 991px) {
+      .profile-container {
+        padding-right: 20px;
+      }
+    
+      .layout-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+    
+      .sidebar,
+      .main-content {
+        width: 100%;
+        margin-left: 0;
+      }
+    
+      .sidebar-content {
+        margin-top: 32px;
+        padding: 0 20px;
+      }
+    
+      .nav-item {
+        margin-left: 10px;
+      }
+    
+      .profile-form {
+        padding: 0 20px;
+      }
+    
+      .edit-button {
+        padding: 0 20px;
+      }
+    }
+    </style>
+    
+    <div class="profile-container">
+      <div class="layout-wrapper">
+        <div class="sidebar">
+          <nav class="sidebar-content">
+            <div class="brand-header">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c7f1a955bb1eb93ae527f61c5d43cfe0957cb4305c6b184823094df83f6e1055?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="Smart Learn Logo" class="brand-logo" />
+              <span class="brand-name">smart learn</span>
+            </div>
+    
+            <div class="nav-item">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cad9bf7e759addd4fa574d8cd4480338aa226c09af158a6b353387deab88202b?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+              <span class="nav-text">Dashboard</span>
+            </div>
+    
+            <div class="nav-item">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/25b27fd62ccb7c9aab86aa087c455b83b45b1ffadeb126ff476b35100607b5eb?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+              <span class="nav-text">Calendar</span>
+            </div>
+    
+            <div class="nav-item">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e14c9a79a6b64b8d505eb9703abef6177c3c5555be164dda8d7d980493a9399d?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+              <span class="nav-text">Library</span>
+            </div>
+    
+            <div class="nav-item">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/193d8a542bace9280b032f53c89f329bb174e63a7636b0309cae1aa8b7c3cdd4?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+              <span class="nav-text">Classroom</span>
+            </div>
+    
+            <div class="nav-item">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0c523577d26237dbb620331438f0576b41f6b9c406828c4f14310d39338d1c7c?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+              <span class="nav-text">Courses</span>
+            </div>
+    
+            <div class="nav-item">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/dacacd041401d57cc0beea57dcd37927fd0fffbf1d16268438a8b1ecf9693e67?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+              <span class="nav-text">Integration</span>
+            </div>
+    
+            <div class="nav-item">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8e5342672aa584cb97784acc7cb6a6c4b84da352126de8cc7e436fe72a4564e3?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+              <span class="nav-text">Assignments</span>
+            </div>
+    
+            <div class="nav-item">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5ae4ef7f9d3bcbe50a5b0a4d134f9ea4dfb0d892ad4a947028fdca19e2abdd84?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+              <span class="nav-text">Attendance</span>
+            </div>
+    
+            <div class="nav-item">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9fa3a651017721db6d6bf749b66b660560ca6da7c6e4067040521b8c7e026662?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+              <span class="nav-text">Messages</span>
+            </div>
+    
+            <div class="nav-item">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ba27ff6d1c7e71f80209ef745eec4b0a8136953e9b6927a6f1b1cb4404602631?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+              <span class="nav-text">Help</span>
+            </div>
+    
+            <div class="nav-item">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/50972fc07dbb4d8135743744c711875340043ad494b28165ca290b33fed43254?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+              <span class="nav-text">Settings</span>
+            </div>
+    
+            <div class="nav-item">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/07e10317a586e23564707774cc3c6c08dba90de7e8f41ac6d162248ffdfa6437?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+              <span class="nav-text">Log out</span>
+            </div>
+          </nav>
+        </div>
+    
+        <main class="main-content">
+          <div class="profile-header">
+            <h1 class="page-title">My profile</h1>
+            
+            <div class="user-profile">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/57069974a59e938104b06816162a4ae7da5823cc3f2d2c7e0a62b1b6ea9be28f?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="Profile photo of Swetha Shankaresh" class="profile-avatar" />
+              <div class="profile-info">
+                <div class="profile-name">
+                  <span>Swetha shankaresh</span>
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8c4a24c0d765f584451f9bf2b5e831dfae757b91dc50354d441bab07ae81c5f3?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" />
+                </div>
+                <span class="profile-role">Student</span>
+              </div>
+            </div>
+          </div>
+    
+          <form class="profile-form">
+            <div class="form-section">
+              <label for="username" class="form-label">Username</label>
+              <input type="text" id="username" class="form-input" />
+            </div>
+    
+            <div class="form-section">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" id="email" class="form-input" />
+            </div>
+    
+            <div class="form-section">
+              <label for="firstname" class="form-label">First name</label>
+              <input type="text" id="firstname" class="form-input" />
+            </div>
+    
+            <div class="form-section">
+              <label for="lastname" class="form-label">Last name</label>
+              <input type="text" id="lastname" class="form-input" />
+            </div>
+    
+            <div class="form-section">
+              <label for="address" class="form-label">Address</label>
+              <input type="text" id="address" class="form-input" />
+            </div>
+    
+            <div class="form-section">
+              <label for="city" class="form-label">City</label>
+              <input type="text" id="city" class="form-input" />
+            </div>
+    
+            <div class="form-section">
+              <label for="country" class="form-label">Country</label>
+              <input type="text" id="country" class="form-input" />
+            </div>
+    
+            <div class="form-section">
+              <label for="postal" class="form-label">Postal code</label>
+              <input type="text" id="postal" class="form-input" />
+            </div>
+    
+            <button type="submit" class="edit-button">Edit</button>
+          </form>
+        </main>
+      </div>
+    </div>

@@ -1,0 +1,177 @@
+<style>
+    .login-container {
+      background-color: rgba(255, 250, 250, 1);
+      padding: 0 0 0 80px;
+      overflow: hidden;
+    }
+    .content-wrapper {
+      gap: 20px;
+      display: flex;
+    }
+    .left-section {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 32%;
+    }
+    .brand-container {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-self: stretch;
+      margin: auto 0;
+    }
+    .logo-section {
+      align-self: start;
+    }
+    .logo-wrapper {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 68%;
+    }
+    .logo {
+      aspect-ratio: 1.42;
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+      flex-grow: 1;
+    }
+    .brand-text-wrapper {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 32%;
+      margin-left: 20px;
+    }
+    .brand-name {
+      color: rgba(0, 0, 0, 1);
+      align-self: stretch;
+      margin: auto 0;
+      font: 700 48px Istok Web, sans-serif;
+    }
+    .login-options {
+      align-self: end;
+      display: flex;
+      margin-top: 106px;
+      gap: 13px;
+      font: 700 16px Istok Web, sans-serif;
+    }
+    .student-login {
+      border-radius: 10px;
+      background-color: rgba(37, 37, 173, 1);
+      color: rgba(255, 250, 250, 1);
+      padding: 20px 26px;
+      border: 1px solid rgba(0, 0, 0, 1);
+      cursor: pointer;
+    }
+    .teacher-login {
+      border-radius: 10px;
+      background-color: rgba(255, 250, 250, 1);
+      color: rgba(0, 0, 0, 1);
+      padding: 20px 26px;
+      border: 1px solid rgba(0, 0, 0, 1);
+      cursor: pointer;
+    }
+    .right-section {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 68%;
+      margin-left: 20px;
+    }
+    .hero-image {
+      aspect-ratio: 0.88;
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+      flex-grow: 1;
+    }
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+    @media (max-width: 991px) {
+      .login-container {
+        padding-left: 20px;
+      }
+      .content-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+      .left-section {
+        width: 100%;
+      }
+      .brand-container {
+        max-width: 100%;
+        margin-top: 40px;
+      }
+      .logo {
+        margin-top: 21px;
+      }
+      .brand-text-wrapper {
+        width: 100%;
+      }
+      .brand-name {
+        margin-top: 40px;
+        font-size: 40px;
+      }
+      .login-options {
+        margin-top: 40px;
+      }
+      .student-login,
+      .teacher-login {
+        padding: 0 20px;
+      }
+      .right-section {
+        width: 100%;
+      }
+      .hero-image {
+        max-width: 100%;
+        margin-top: 25px;
+      }
+    }
+  </style>
+  
+  <div class="login-container">
+    <div class="content-wrapper">
+      <div class="left-section">
+        <div class="brand-container">
+          <div class="logo-section">
+            <div class="content-wrapper">
+              <div class="logo-wrapper">
+                <img
+                  loading="lazy"
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/c39b6338bbfe5dc7385aad53b17e1f7a377c10938951ee4a95e05566f6d77166?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5"
+                  class="logo"
+                  alt="Smart Learn platform logo"
+                />
+              </div>
+              <div class="brand-text-wrapper">
+                <h1 class="brand-name">smart learn</h1>
+              </div>
+            </div>
+          </div>
+          <div class="login-options">
+            <button class="student-login" tabindex="0">Login as a Student</button>
+            <button class="teacher-login" tabindex="0">Login as a Teacher</button>
+          </div>
+        </div>
+      </div>
+      <div class="right-section">
+        <img
+          loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/8c736633-cde2-475e-b3fd-4316d37c6de4?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5"
+          class="hero-image"
+          alt="Educational illustration representing online learning"
+        />
+      </div>
+    </div>
+  </div>

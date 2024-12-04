@@ -1,0 +1,359 @@
+<style>
+    .exam-container {
+      border-radius: 20px;
+      padding: 0 0 19px;
+      overflow: hidden;
+    }
+    
+    .layout-wrapper {
+      display: flex;
+      gap: 20px;
+    }
+    
+    .sidebar {
+      width: 25%;
+      background-color: rgb(255, 250, 250);
+      border-radius: 20px;
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+      padding: 28px 0 16px;
+    }
+    
+    .logo-section {
+      display: flex;
+      align-items: flex-start;
+      gap: 40px;
+      padding: 0 68px 0 30px;
+    }
+    
+    .logo {
+      width: 108px;
+      aspect-ratio: 1.21;
+      object-fit: contain;
+    }
+    
+    .brand-name {
+      font: 700 32px 'Istok Web', sans-serif;
+      margin-top: 36px;
+    }
+    
+    .nav-item {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      padding: 10px 30px;
+      color: rgb(43, 89, 206);
+      font: 700 16px 'Istok Web', sans-serif;
+    }
+    
+    .nav-icon {
+      width: 40px;
+      aspect-ratio: 1;
+      object-fit: contain;
+    }
+    
+    .main-content {
+      width: 75%;
+      padding: 29px 0;
+    }
+    
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 22px;
+    }
+    
+    .page-title {
+      font: 700 34px 'Istok Web', sans-serif;
+    }
+    
+    .search-bar {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: rgb(255, 250, 250);
+      border-radius: 10px;
+      padding: 9px 20px;
+    }
+    
+    .search-icon {
+      width: 22px;
+      aspect-ratio: 0.92;
+      object-fit: contain;
+    }
+    
+    .search-input {
+      border: none;
+      background: transparent;
+      font: 700 12px 'Istok Web', sans-serif;
+      color: rgba(0, 0, 0, 0.36);
+    }
+    
+    .user-profile {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+    
+    .profile-image {
+      width: 72px;
+      border-radius: 100px;
+      aspect-ratio: 1.04;
+      object-fit: contain;
+    }
+    
+    .user-info {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .user-name {
+      font: 700 14px 'Istok Web', sans-serif;
+    }
+    
+    .user-role {
+      font: 400 12px 'Istok Web', sans-serif;
+      color: rgb(62, 62, 62);
+      margin-top: 9px;
+    }
+    
+    .exam-list {
+      background: rgb(255, 255, 255);
+      border-radius: 10px;
+      padding: 42px 30px;
+    }
+    
+    .exam-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(247, 243, 243, 1);
+      border-radius: 10px;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      padding: 30px 25px;
+      margin-bottom: 32px;
+    }
+    
+    .exam-details {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .exam-title {
+      font: 700 14px 'Istok Web', sans-serif;
+      color: rgb(0, 0, 0);
+    }
+    
+    .exam-subject {
+      font: 700 14px 'Istok Web', sans-serif;
+      color: rgba(78, 61, 95, 0.64);
+      margin-top: 13px;
+    }
+    
+    .exam-term {
+      background: rgba(109, 136, 206, 0.41);
+      border: 1px solid rgb(43, 89, 206);
+      border-radius: 10px;
+      color: rgb(43, 89, 206);
+      padding: 8px 34px;
+      font: 700 14px 'Istok Web', sans-serif;
+    }
+    
+    .exam-stats {
+      font: 700 14px 'Istok Web', sans-serif;
+      color: rgba(0, 0, 0, 0.5);
+    }
+    
+    .preview-btn {
+      background: rgb(255, 250, 250);
+      border: 2px solid rgb(43, 89, 206);
+      border-radius: 10px;
+      color: rgb(43, 89, 206);
+      padding: 10px 33px;
+      font: 700 14px 'Istok Web', sans-serif;
+      cursor: pointer;
+    }
+    
+    @media (max-width: 991px) {
+      .exam-container {
+        padding-right: 20px;
+      }
+      
+      .layout-wrapper {
+        flex-direction: column;
+      }
+      
+      .sidebar,
+      .main-content {
+        width: 100%;
+      }
+      
+      .logo-section {
+        padding: 0 20px;
+      }
+      
+      .exam-list {
+        padding: 20px;
+      }
+      
+      .exam-item {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+      }
+    }
+    </style>
+    
+    <div class="exam-container">
+      <div class="layout-wrapper">
+        <nav class="sidebar">
+          <div class="logo-section">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9480816a484c112d386042a83e7a7203c12ce4e56c179eca9208f6ac7b24c5ac?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="Smart Learn Logo" class="logo">
+            <h1 class="brand-name">smart learn</h1>
+          </div>
+          
+          <div class="nav-item">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cad9bf7e759addd4fa574d8cd4480338aa226c09af158a6b353387deab88202b?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon">
+            <span>Dashboard</span>
+          </div>
+          
+          <div class="nav-item">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/25b27fd62ccb7c9aab86aa087c455b83b45b1ffadeb126ff476b35100607b5eb?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon">
+            <span>Calendar</span>
+          </div>
+          
+          <div class="nav-item">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e14c9a79a6b64b8d505eb9703abef6177c3c5555be164dda8d7d980493a9399d?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon">
+            <span>Library</span>
+          </div>
+          
+          <div class="nav-item">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/193d8a542bace9280b032f53c89f329bb174e63a7636b0309cae1aa8b7c3cdd4?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon">
+            <span>Classroom</span>
+          </div>
+          
+          <div class="nav-item">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0c523577d26237dbb620331438f0576b41f6b9c406828c4f14310d39338d1c7c?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon">
+            <span>Courses</span>
+          </div>
+          
+          <div class="nav-item">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/dacacd041401d57cc0beea57dcd37927fd0fffbf1d16268438a8b1ecf9693e67?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon">
+            <span>Integration</span>
+          </div>
+          
+          <div class="nav-item">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8e5342672aa584cb97784acc7cb6a6c4b84da352126de8cc7e436fe72a4564e3?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon">
+            <span>Assignments</span>
+          </div>
+          
+          <div class="nav-item">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5ae4ef7f9d3bcbe50a5b0a4d134f9ea4dfb0d892ad4a947028fdca19e2abdd84?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon">
+            <span>Attendance</span>
+          </div>
+          
+          <div class="nav-item">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9fa3a651017721db6d6bf749b66b660560ca6da7c6e4067040521b8c7e026662?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon">
+            <span>Messages</span>
+          </div>
+          
+          <div class="nav-item">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ba27ff6d1c7e71f80209ef745eec4b0a8136953e9b6927a6f1b1cb4404602631?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon">
+            <span>Help</span>
+          </div>
+          
+          <div class="nav-item">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/50972fc07dbb4d8135743744c711875340043ad494b28165ca290b33fed43254?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon">
+            <span>Settings</span>
+          </div>
+          
+          <div class="nav-item">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/07e10317a586e23564707774cc3c6c08dba90de7e8f41ac6d162248ffdfa6437?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon">
+            <span>Log out</span>
+          </div>
+        </nav>
+    
+        <main class="main-content">
+          <header class="header">
+            <h2 class="page-title">Exams</h2>
+            
+            <div class="search-bar">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/52228f5883a88834f1d1594a11b424c5e6b27ba740a6c9be39bfe1b7574736b9?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="search-icon">
+              <input type="search" class="search-input" placeholder="Search" aria-label="Search exams">
+            </div>
+            
+            <div class="user-profile">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/57069974a59e938104b06816162a4ae7da5823cc3f2d2c7e0a62b1b6ea9be28f?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="profile-image">
+              <div class="user-info">
+                <span class="user-name">Swetha shankaresh</span>
+                <span class="user-role">Student</span>
+              </div>
+            </div>
+          </header>
+    
+          <section class="exam-list" aria-label="Exam list">
+            <h3 class="page-title">Exams</h3>
+            
+            <div class="exam-item">
+              <div class="exam-details">
+                <h4 class="exam-title">Final exam</h4>
+                <span class="exam-subject">Mathematics</span>
+              </div>
+              <span class="exam-term">1st Term</span>
+              <p class="exam-stats">10 Questions<br>100 points</p>
+              <button class="preview-btn">Preview</button>
+            </div>
+    
+            <div class="exam-item">
+              <div class="exam-details">
+                <h4 class="exam-title">Final exam</h4>
+                <span class="exam-subject">Chemistry</span>
+              </div>
+              <span class="exam-term">1st Term</span>
+              <p class="exam-stats">10 Questions<br>100 points</p>
+              <button class="preview-btn">Preview</button>
+            </div>
+    
+            <div class="exam-item">
+              <div class="exam-details">
+                <h4 class="exam-title">Final exam</h4>
+                <span class="exam-subject">Botany</span>
+              </div>
+              <span class="exam-term">1st Term</span>
+              <p class="exam-stats">10 Questions<br>100 points</p>
+              <button class="preview-btn">Preview</button>
+            </div>
+    
+            <div class="exam-item">
+              <div class="exam-details">
+                <h4 class="exam-title">Final exam</h4>
+                <span class="exam-subject">Physics</span>
+              </div>
+              <span class="exam-term">1st Term</span>
+              <p class="exam-stats">10 Questions<br>100 points</p>
+              <button class="preview-btn">Preview</button>
+            </div>
+    
+            <div class="exam-item">
+              <div class="exam-details">
+                <h4 class="exam-title">Final exam</h4>
+                <span class="exam-subject">English</span>
+              </div>
+              <span class="exam-term">1st Term</span>
+              <p class="exam-stats">10 Questions<br>100 points</p>
+              <button class="preview-btn">Preview</button>
+            </div>
+    
+            <div class="exam-item">
+              <div class="exam-details">
+                <h4 class="exam-title">Final exam</h4>
+                <span class="exam-subject">Social</span>
+              </div>
+              <span class="exam-term">1st Term</span>
+              <p class="exam-stats">10 Questions<br>100 points</p>
+              <button class="preview-btn">Preview</button>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>

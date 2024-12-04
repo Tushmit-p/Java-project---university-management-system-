@@ -1,0 +1,347 @@
+<style>
+.dashboard-container {
+  border-radius: 20px;
+  padding-bottom: 19px;
+  overflow: hidden;
+}
+
+.main-layout {
+  gap: 20px;
+  display: flex;
+}
+
+.sidebar {
+  border-radius: 20px;
+  background-color: rgba(255, 250, 250, 1);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: start;
+  padding: 28px 0 16px;
+}
+
+.logo-section {
+  display: flex;
+  margin-left: 30px;
+  width: 207px;
+  max-width: 100%;
+  flex-direction: column;
+  font-family: Istok Web, sans-serif;
+  font-weight: 700;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  font-size: 32px;
+  color: rgba(0, 0, 0, 1);
+}
+
+.logo {
+  aspect-ratio: 1.21;
+  object-fit: contain;
+  width: 108px;
+  align-self: start;
+  max-width: 100%;
+}
+
+.brand-name {
+  align-self: end;
+  margin-top: 32px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 20px;
+  color: rgba(43, 89, 206, 1);
+  font-family: Istok Web, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.nav-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  width: 24px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.page-title {
+  font-size: 34px;
+  font-weight: 700;
+  font-family: Istok Web, sans-serif;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 250, 250, 1);
+  padding: 9px 20px;
+  border-radius: 10px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-image {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.user-role {
+  font-size: 12px;
+  color: rgba(62, 62, 62, 1);
+}
+
+.calendar-section {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.calendar-day {
+  text-align: center;
+  padding: 10px;
+}
+
+.event-highlight {
+  background-color: rgba(212, 222, 255, 1);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.deadline-highlight {
+  background-color: rgba(219, 73, 94, 0.2);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.schedule-sidebar {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.schedule-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.schedule-event {
+  background-color: rgba(212, 222, 255, 1);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 991px) {
+  .main-layout {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .main-content {
+    padding: 10px;
+  }
+  
+  .calendar-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+</style>
+
+<div class="dashboard-container">
+  <div class="main-layout">
+    <nav class="sidebar">
+      <div class="logo-section">
+        <div class="logo-wrapper">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9480816a484c112d386042a83e7a7203c12ce4e56c179eca9208f6ac7b24c5ac?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="Smart Learn Logo" class="logo" />
+          <span class="brand-name">smart learn</span>
+        </div>
+      </div>
+      
+      <a href="#" class="nav-item" tabindex="0">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cad9bf7e759addd4fa574d8cd4480338aa226c09af158a6b353387deab88202b?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+        <span>Dashboard</span>
+      </a>
+      
+      <a href="#" class="nav-item" tabindex="0">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/25b27fd62ccb7c9aab86aa087c455b83b45b1ffadeb126ff476b35100607b5eb?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+        <span>Calendar</span>
+      </a>
+      
+      <a href="#" class="nav-item" tabindex="0">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e14c9a79a6b64b8d505eb9703abef6177c3c5555be164dda8d7d980493a9399d?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+        <span>Library</span>
+      </a>
+      
+      <a href="#" class="nav-item" tabindex="0">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/193d8a542bace9280b032f53c89f329bb174e63a7636b0309cae1aa8b7c3cdd4?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+        <span>Classroom</span>
+      </a>
+      
+      <a href="#" class="nav-item" tabindex="0">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0c523577d26237dbb620331438f0576b41f6b9c406828c4f14310d39338d1c7c?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+        <span>Courses</span>
+      </a>
+      
+      <a href="#" class="nav-item" tabindex="0">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/dacacd041401d57cc0beea57dcd37927fd0fffbf1d16268438a8b1ecf9693e67?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+        <span>Integration</span>
+      </a>
+      
+      <a href="#" class="nav-item" tabindex="0">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8e5342672aa584cb97784acc7cb6a6c4b84da352126de8cc7e436fe72a4564e3?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+        <span>Assignments</span>
+      </a>
+      
+      <a href="#" class="nav-item" tabindex="0">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5ae4ef7f9d3bcbe50a5b0a4d134f9ea4dfb0d892ad4a947028fdca19e2abdd84?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+        <span>Attendance</span>
+      </a>
+      
+      <a href="#" class="nav-item" tabindex="0">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9fa3a651017721db6d6bf749b66b660560ca6da7c6e4067040521b8c7e026662?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+        <span>Messages</span>
+      </a>
+      
+      <a href="#" class="nav-item" tabindex="0">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ba27ff6d1c7e71f80209ef745eec4b0a8136953e9b6927a6f1b1cb4404602631?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+        <span>Help</span>
+      </a>
+      
+      <a href="#" class="nav-item" tabindex="0">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/50972fc07dbb4d8135743744c711875340043ad494b28165ca290b33fed43254?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+        <span>Settings</span>
+      </a>
+      
+      <a href="#" class="nav-item" tabindex="0">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/07e10317a586e23564707774cc3c6c08dba90de7e8f41ac6d162248ffdfa6437?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+        <span>Log out</span>
+      </a>
+    </nav>
+
+    <main class="main-content">
+      <header class="header">
+        <h1 class="page-title">Exams</h1>
+        
+        <div class="search-bar">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f1bdd5818505eb9796f087bfbc2344ea8bb215e39716cb6b38c877da8cf29b5f?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="nav-icon" />
+          <span>Search</span>
+        </div>
+        
+        <div class="user-profile">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/57069974a59e938104b06816162a4ae7da5823cc3f2d2c7e0a62b1b6ea9be28f?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="Profile photo of Swetha shankaresh" class="profile-image" />
+          <div class="user-info">
+            <span class="user-name">Swetha shankaresh</span>
+            <span class="user-role">Student</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="calendar-section">
+        <div class="calendar-header">
+          <h2>NOVEMBER 2023</h2>
+          <div>
+            <button tabindex="0">Daily</button>
+            <button tabindex="0">Weekly</button>
+            <button tabindex="0">Monthly</button>
+            <button tabindex="0">Yearly</button>
+          </div>
+        </div>
+
+        <div class="calendar-grid">
+          <div class="calendar-day">Mon</div>
+          <div class="calendar-day">Tue</div>
+          <div class="calendar-day">Wed</div>
+          <div class="calendar-day">Thu</div>
+          <div class="calendar-day">Fri</div>
+          <div class="calendar-day">Sat</div>
+          <div class="calendar-day">Sun</div>
+          
+          <!-- Calendar days -->
+          <div class="calendar-day">1</div>
+          <div class="calendar-day">2</div>
+          <div class="calendar-day">3</div>
+          <div class="calendar-day">4</div>
+          <div class="calendar-day">5</div>
+          <div class="calendar-day event-highlight">
+            <span>6</span>
+            <p>Physics workshop</p>
+          </div>
+          <div class="calendar-day">7</div>
+          <!-- Remaining calendar days -->
+        </div>
+      </div>
+    </main>
+
+    <aside class="schedule-sidebar">
+      <h2 class="schedule-title">Schedules</h2>
+      <p>November 20, Monday</p>
+      
+      <div class="schedule-event">
+        <time>10:00 AM</time>
+        <p>Live class</p>
+      </div>
+      
+      <div class="schedule-event">
+        <time>11:00 AM</time>
+        <p>Physics Workshop</p>
+      </div>
+      
+      <div class="schedule-event">
+        <time>2:00 PM</time>
+        <p>Weekly Meeting</p>
+      </div>
+    </aside>
+  </div>
+</div>

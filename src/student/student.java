@@ -1,7 +1,7 @@
 package student;
 public class student{
-    String first_name;//
-    String last_name;//
+    String first_name;
+    String last_name;
     String date_of_birth;
     String gender;
     String mother_name;

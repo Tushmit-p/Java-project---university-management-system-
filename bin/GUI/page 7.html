@@ -1,0 +1,359 @@
+<style>
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.integrations-layout {
+  border-radius: 20px;
+  padding-bottom: 19px;
+  overflow: hidden;
+}
+
+.main-container {
+  gap: 20px;
+  display: flex;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 25%;
+}
+
+.sidebar-content {
+  border-radius: 20px;
+  background-color: rgba(255, 250, 250, 1);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 28px 0 16px;
+}
+
+.nav-menu {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: start;
+  color: rgba(43, 89, 206, 1);
+  padding: 0 68px 0 30px;
+  font: 700 16px Istok Web, sans-serif;
+}
+
+.brand-header {
+  display: flex;
+  gap: 26px;
+  font-size: 32px;
+  color: rgba(0, 0, 0, 1);
+}
+
+.brand-logo {
+  aspect-ratio: 1.21;
+  object-fit: contain;
+  width: 108px;
+}
+
+.brand-name {
+  align-self: end;
+  margin-top: 23px;
+}
+
+.nav-item {
+  display: flex;
+  gap: 34px;
+  margin: 59px 0 0 26px;
+}
+
+.nav-icon {
+  aspect-ratio: 0.93;
+  object-fit: contain;
+  width: 28px;
+}
+
+.nav-text {
+  margin: auto 0;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 75%;
+  margin-left: 20px;
+}
+
+.content-wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-self: stretch;
+  align-items: start;
+  margin: auto 0;
+}
+
+.page-title {
+  color: rgba(0, 0, 0, 1);
+  font: 700 34px Istok Web, sans-serif;
+}
+
+.header-controls {
+  display: flex;
+  margin-top: 7px;
+  width: 100%;
+  max-width: 992px;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.search-box {
+  border-radius: 10px;
+  background-color: rgba(255, 250, 250, 1);
+  align-self: stretch;
+  display: flex;
+  align-items: start;
+  color: rgba(0, 0, 0, 0.36);
+  padding: 9px 20px;
+  font: 700 12px Istok Web, sans-serif;
+}
+
+.search-icon {
+  aspect-ratio: 0.92;
+  object-fit: contain;
+  width: 22px;
+}
+
+.notification-area {
+  align-self: stretch;
+  display: flex;
+  gap: 20px;
+  margin: auto 0;
+}
+
+.user-profile {
+  align-self: stretch;
+  display: flex;
+  gap: 16px;
+  font-family: Istok Web, sans-serif;
+}
+
+.profile-image {
+  aspect-ratio: 1.04;
+  object-fit: contain;
+  width: 72px;
+  border-radius: 100px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+}
+
+.user-name {
+  display: flex;
+  gap: 9px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 1);
+  font-weight: 700;
+}
+
+.user-role {
+  color: rgba(62, 62, 62, 1);
+  font-size: 12px;
+  font-weight: 400;
+  align-self: start;
+}
+
+.integration-grid {
+  border-radius: 10px;
+  background-color: rgba(255, 250, 250, 1);
+  align-self: stretch;
+  display: flex;
+  margin-top: 35px;
+  width: 100%;
+  flex-direction: column;
+  padding: 106px 36px;
+}
+
+.integration-item {
+  border-radius: 10px;
+  background-color: rgba(232, 225, 225, 1);
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  color: rgba(0, 0, 0, 1);
+  width: 100%;
+  padding: 73px 58px;
+  font: 700 24px Istok Web, sans-serif;
+}
+
+.integration-icon {
+  aspect-ratio: 1.16;
+  object-fit: contain;
+  width: 95px;
+}
+
+.integration-name {
+  margin-top: 29px;
+}
+
+@media (max-width: 991px) {
+  .integrations-layout {
+    padding-right: 20px;
+  }
+
+  .main-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .sidebar-content {
+    margin-top: 30px;
+  }
+
+  .nav-menu {
+    padding: 0 20px;
+  }
+
+  .nav-item {
+    margin-left: 10px;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+
+  .content-wrapper {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+
+  .header-controls {
+    max-width: 100%;
+  }
+
+  .search-box {
+    max-width: 100%;
+  }
+
+  .integration-grid {
+    max-width: 100%;
+    padding: 100px 20px 0;
+  }
+
+  .integration-item {
+    margin-top: 35px;
+    padding: 0 20px;
+  }
+}
+</style>
+
+<div class="integrations-layout">
+  <div class="main-container">
+    <div class="sidebar">
+      <div class="sidebar-content">
+        <nav class="nav-menu">
+          <div class="brand-header">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c7f1a955bb1eb93ae527f61c5d43cfe0957cb4305c6b184823094df83f6e1055?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="Smart Learn Logo" class="brand-logo" />
+            <div class="brand-name">smart learn</div>
+          </div>
+          <div class="nav-item">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cad9bf7e759addd4fa574d8cd4480338aa226c09af158a6b353387deab88202b?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="Dashboard Icon" class="nav-icon" />
+            <div class="nav-text">Dashboard</div>
+          </div>
+          <div class="nav-item">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/25b27fd62ccb7c9aab86aa087c455b83b45b1ffadeb126ff476b35100607b5eb?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="Calendar Icon" class="nav-icon" />
+            <div class="nav-text">Calendar</div>
+          </div>
+          <div class="nav-item">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e14c9a79a6b64b8d505eb9703abef6177c3c5555be164dda8d7d980493a9399d?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="Library Icon" class="nav-icon" />
+            <div class="nav-text">Library</div>
+          </div>
+          <div class="nav-item">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/193d8a542bace9280b032f53c89f329bb174e63a7636b0309cae1aa8b7c3cdd4?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="Classroom Icon" class="nav-icon" />
+            <div class="nav-text">Classroom</div>
+          </div>
+          <div class="nav-item">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0c523577d26237dbb620331438f0576b41f6b9c406828c4f14310d39338d1c7c?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="Courses Icon" class="nav-icon" />
+            <div class="nav-text">Courses</div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <div class="content-wrapper">
+        <h1 class="page-title">Integrations</h1>
+        <div class="header-controls">
+          <div class="search-box" role="search">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e5bdc4c5a639ffcd22de3337245d7a7bd0c1d7c5b35a707a7e1365d1a2f5cbae?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" class="search-icon" />
+            <label for="search-input" class="visually-hidden">Search</label>
+            <input type="text" id="search-input" placeholder="Search" />
+          </div>
+          <div class="notification-area">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5f84a7a9db86da9e39065889f7a1b4553f88c950a19d04772fb2425a1b55fa56?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="Notifications" />
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/42f709f16d2b6f67facac920c93cfd0118d4afa5f3e0968bd2c849b5d574b64f?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="Messages" />
+          </div>
+          <div class="user-profile">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/57069974a59e938104b06816162a4ae7da5823cc3f2d2c7e0a62b1b6ea9be28f?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="User Profile Picture" class="profile-image" />
+            <div class="profile-info">
+              <div class="user-name">
+                <span>Swetha shankaresh</span>
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8c4a24c0d765f584451f9bf2b5e831dfae757b91dc50354d441bab07ae81c5f3?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="" />
+              </div>
+              <div class="user-role">Student</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="integration-grid">
+          <div class="integration-row">
+            <div class="integration-item">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/342466cf34bdb4d2ad359ca50e05395ebb90eff47ed74174ca65f1a16e171789?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="Google Drive Icon" class="integration-icon" />
+              <div class="integration-name">Google Drive</div>
+            </div>
+            <div class="integration-item">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2e32fe02111e5f05f2261e88ca2c84de8e290544abbe182bc90f96b783fc1aa2?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="Google Lens Icon" class="integration-icon" />
+              <div class="integration-name">Google Lens</div>
+            </div>
+            <div class="integration-item">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b82d9f4d302582782369eb0a6aa36fa995ba23633efda9e9016340d9e0b3f6e4?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="Google Lens Icon" class="integration-icon" />
+              <div class="integration-name">Google Lens</div>
+            </div>
+          </div>
+
+          <div class="integration-row">
+            <div class="integration-item">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1713dae89677b1e505695ed25ee9ed6dbdf644896da54f289802e34116d87b76?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="Google Doc Icon" class="integration-icon" />
+              <div class="integration-name">Google Doc</div>
+            </div>
+            <div class="integration-item">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/798655c7dd15ac3c80a3ce179eca373e056960efc1a3f357c26ab546840f245a?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="Microsoft Word Icon" class="integration-icon" />
+              <div class="integration-name">Word</div>
+            </div>
+            <div class="integration-item">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/63cff0ab82098906e23d6c9773d3fdc9622a2d1c5009ef01b330c2f24008e643?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5" alt="Microsoft PowerPoint Icon" class="integration-icon" />
+              <div class="integration-name">Power point</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

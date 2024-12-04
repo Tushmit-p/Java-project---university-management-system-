@@ -1,0 +1,205 @@
+<style>
+    .login-container {
+      overflow: hidden;
+    }
+    .content-wrapper {
+      gap: 20px;
+      display: flex;
+    }
+    .left-section {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 32%;
+      margin-left: 0;
+    }
+    .login-form-container {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-self: stretch;
+      margin: auto 0;
+    }
+    .logo-section {
+      align-self: start;
+    }
+    .logo-wrapper {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 68%;
+      margin-left: 0;
+    }
+    .logo-image {
+      aspect-ratio: 1.42;
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+    }
+    .brand-wrapper {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 32%;
+      margin-left: 20px;
+    }
+    .brand-name {
+      color: rgba(0, 0, 0, 1);
+      margin-top: 104px;
+      font: 700 48px Istok Web, sans-serif;
+    }
+    .form-fields {
+      display: flex;
+      margin-top: 69px;
+      padding-left: 44px;
+      flex-direction: column;
+      align-items: start;
+    }
+    .input-field {
+      border-radius: 10px;
+      background-color: rgba(255, 250, 250, 1);
+      padding: 16px 26px;
+      border: 1px solid rgba(0, 0, 0, 1);
+      width: 100%;
+      color: rgba(150, 145, 145, 1);
+      font: 700 16px Istok Web, sans-serif;
+    }
+    .password-field {
+      margin-top: 42px;
+    }
+    .submit-button {
+      border-radius: 10px;
+      background-color: rgba(37, 37, 173, 1);
+      margin-top: 72px;
+      color: rgba(255, 255, 255, 1);
+      padding: 20px 70px;
+      border: 1px solid rgba(0, 0, 0, 1);
+      cursor: pointer;
+    }
+    .right-section {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 68%;
+      margin-left: 20px;
+    }
+    .hero-image {
+      aspect-ratio: 0.88;
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+      flex-grow: 1;
+    }
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+    @media (max-width: 991px) {
+      .login-container {
+        padding-left: 20px;
+      }
+      .content-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+      .left-section {
+        width: 100%;
+      }
+      .login-form-container {
+        max-width: 100%;
+        margin-top: 40px;
+      }
+      .logo-image {
+        margin-top: 17px;
+      }
+      .brand-wrapper {
+        width: 100%;
+      }
+      .brand-name {
+        margin-top: 40px;
+        font-size: 40px;
+      }
+      .form-fields {
+        max-width: 100%;
+        padding-left: 20px;
+        margin-top: 40px;
+      }
+      .input-field {
+        padding: 16px 20px;
+      }
+      .password-field {
+        margin-top: 40px;
+      }
+      .submit-button {
+        margin-top: 40px;
+        padding: 20px;
+      }
+      .right-section {
+        width: 100%;
+      }
+      .hero-image {
+        max-width: 100%;
+        margin-top: 40px;
+      }
+    }
+  </style>
+  
+  <div class="login-container">
+    <div class="content-wrapper">
+      <div class="left-section">
+        <div class="login-form-container">
+          <div class="logo-section">
+            <div class="content-wrapper">
+              <div class="logo-wrapper">
+                <img
+                  loading="lazy"
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/c39b6338bbfe5dc7385aad53b17e1f7a377c10938951ee4a95e05566f6d77166?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5"
+                  class="logo-image"
+                  alt="Smart Learn Logo"
+                />
+              </div>
+              <div class="brand-wrapper">
+                <div class="brand-name">smart learn</div>
+              </div>
+            </div>
+          </div>
+          <form class="form-fields">
+            <label for="username" class="visually-hidden">Username</label>
+            <input 
+              type="text" 
+              id="username" 
+              class="input-field" 
+              placeholder="username"
+              required
+            />
+            
+            <label for="password" class="visually-hidden">Password</label>
+            <input 
+              type="password" 
+              id="password" 
+              class="input-field password-field" 
+              placeholder="Password"
+              required
+            />
+            
+            <button type="submit" class="submit-button">Sign in</button>
+          </form>
+        </div>
+      </div>
+      <div class="right-section">
+        <img
+          loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/68e932e1-f8ff-4d69-8b1f-815a00c506e1?placeholderIfAbsent=true&apiKey=aa9089b1669740edab9df9f331d786d5"
+          class="hero-image"
+          alt="Learning illustration"
+        />
+      </div>
+    </div>
+  </div>
